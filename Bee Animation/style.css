@@ -1,0 +1,331 @@
+body {
+    background: linear-gradient(45deg, #ff7300, #ffa70b);
+    background: #7e80ee;
+    display: flex;
+    cursor: default;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.bee {
+    animation: hover 2s ease-in-out infinite;
+}
+.bee-body {
+    position: relative;
+    margin: 136px 130px 38px 130px;
+    min-width: 130px;
+    background: #fcc51e;
+   /*body*/
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background-size: 130px 65px, cover, cover, cover;
+    background-image: linear-gradient(to bottom, transparent 50%, #292929 50%), radial-gradient(circle at 51% 36%, #ffd764 47%, transparent 47%), radial-gradient(circle at 51% 53%, #ffd764 55%, transparent 55%), radial-gradient(circle at 60% 53%, #ffebb1 60%, transparent 60%);
+    box-shadow: 35px -105px 0 -44px #fbcf4b, -35px -105px 0 -44px #ffd764, 38px -107px 0 -41px #ffebb1, -32px -107px 0 -41px #ffebb1, 35px -105px 0 -38px #ffca31, -35px -105px 0 -38px #ffca31, 3px -95px 0 -18px #ffd764, 5px -100px 0 -15px #ffebb1, 0px -95px 0 -10px #ffca31, -35px -183px 0 -57px #363636, 35px -183px 0 -57px #363636, -33px -185px 0 -56px #505050, 37px -185px 0 -56px #505050, -35px -184px 0 -54px #292929, 35px -184px 0 -54px #292929;
+   /*stripes on body*/
+   /*eyeballs*/
+   /*eyeballs*/
+   /*eyeballs*/
+   /*eyeballs*/
+   /*eyeballs*/
+   /*eyeballs*/
+   /*head*/
+   /*head*/
+   /*head*/
+   /*antenae nubs*/
+   /*antenae nubs*/
+   /*antenae nubs*/
+   /*antenae nubs*/
+   /*antenae nubs*/
+   /*antenae nubs*/
+}
+.bee-body:after {
+    position: absolute;
+    content: '';
+    background: linear-gradient(to bottom, transparent 50%, #363636 50%);
+    height: 130px;
+    width: 130px;
+    right: 0px;
+    bottom: 0px;
+    background-size: 130px 65px;
+    border-radius: 50%;
+    clip-path: ellipse(41% at 51% 48%);
+}
+.bee-body:before {
+    position: absolute;
+    content: '';
+    background: linear-gradient(to bottom, transparent 50%, #434343 50%);
+    height: 130px;
+    width: 130px;
+    right: 0px;
+    bottom: 0px;
+    background-size: 130px 65px;
+    border-radius: 50%;
+    clip-path: ellipse(41% at 61% 48%);
+}
+.mouth {
+   /*mouth*/
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 55px;
+    bottom: 128px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-bottom: 5px solid #363636;
+}
+.antenae {
+    position: relative;
+    z-index: -2;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    right: -75px;
+    bottom: 130px;
+    border: 8px solid #363636;
+   /*right antenae stem*/
+    box-sizing: border-box;
+    border-style: hidden hidden hidden solid;
+    transform: skewY(-20deg);
+}
+.antenae:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    left: -87px;
+    bottom: 30px;
+    border: 8px solid #363636;
+   /*left antenae stem*/
+    box-sizing: border-box;
+    border-style: hidden solid hidden hidden;
+    transform: skewY(40deg);
+}
+.antenae:after {
+   /*stinger*/
+    transform: skewY(20deg);
+    position: absolute;
+    content: '';
+    bottom: -213px;
+    left: -33px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to right, #292929 50%, #363636 50%);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+.bee-left {
+    animation: flight-left 0.5s ease-out infinite;
+    content: '';
+    position: absolute;
+    background-color: #f8f8ff;
+   /*large wing left*/
+    height: 100px;
+    width: 150px;
+    bottom: 110px;
+    right: 100px;
+    border-radius: 30px 130px 0 130px;
+    transform: skewY(20deg);
+    z-index: -1;
+    box-shadow: inset 30px 105px 0 -70px #fff;
+}
+.bee-left:after {
+    animation: flight-little 0.5s ease-in-out infinite;
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 110px;
+    top: 70px;
+    left: 48px;
+    background-color: #f0f0f0;
+   /*little wing left*/
+    border-radius: 50% / 50% 0 100% 50%;
+    box-shadow: inset 10px 1px 0px 0px #fff, inset 30px 7px 0px 0px #f6f6f6;
+}
+.bee-right {
+    animation: flight-right 0.5s ease-in-out infinite;
+    content: '';
+    position: absolute;
+    background-color: #f8f8ff;
+   /*large wing right*/
+    height: 100px;
+    width: 150px;
+    bottom: 110px;
+    left: 100px;
+    border-radius: 30px 130px 0 130px;
+    border-radius: 130px 30px 130px 0px;
+    transform: skewY(-20deg);
+    z-index: -1;
+    box-shadow: inset 30px 105px 0 -70px #fff;
+}
+.bee-right:after {
+    animation: flight-little 0.5s ease-in-out infinite;
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 110px;
+    top: 70px;
+    right: 48px;
+    background-color: #f0f0f0;
+   /*little wing right*/
+    border-radius: 50Array/0Array 50% 50% 100%;
+    box-shadow: inset -10px 1px 0px 0px #fff, inset -30px 7px 0px 0px #f6f6f6;
+}
+.blink {
+    position: relative;
+}
+.blink:before {
+   /*left pupil and eyeball shadows*/
+    background-image: radial-gradient(circle at 71% 38%, #fff 8%, transparent 8%), radial-gradient(circle at 65% 50%, #363636 16%, transparent 16%), radial-gradient(circle at 69% 47%, #434343 19%, transparent 19%), radial-gradient(circle at 65% 50%, #292929 25%, transparent 25%), radial-gradient(ellipse at 50% 55%, #f8f8ff 50%, transparent 50%), radial-gradient(circle at 70% 50%, #fff 65%, transparent 65%);
+    left: 2px;
+}
+.blink:before, .blink:after {
+    clip-path: ellipse(50% 20% at 50% 50%);
+    content: '';
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    top: -67px;
+    animation: blink 10s linear infinite;
+}
+.blink:after {
+   /*right pupil and eyeball shadows*/
+    background-image: radial-gradient(circle at 41% 38%, #fff 8%, transparent 8%), radial-gradient(circle at 35% 50%, #363636 16%, transparent 16%), radial-gradient(circle at 39% 47%, #434343 19%, transparent 19%), radial-gradient(circle at 35% 50%, #292929 25%, transparent 25%), radial-gradient(ellipse at 50% 55%, #f8f8ff 50%, transparent 50%), radial-gradient(circle at 70% 50%, #fff 65%, transparent 65%);
+    left: 73px;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shadow {
+    height: 45px;
+    width: 170px;
+    border-radius: 50%;
+    background-color: #6f67da;
+    animation: shadow 2s ease-in-out infinite;
+}
+@-webkit-keyframes blink {
+    0% {
+        clip-path: ellipse(50% 50% at 50% 50%);
+   }
+    9% {
+        clip-path: ellipse(50% 50% at 50% 50%);
+   }
+    10% {
+        clip-path: ellipse(50% 5% at 50% 50%);
+   }
+    11% {
+        clip-path: ellipse(50% 50% at 50% 50%);
+   }
+    30% {
+        clip-path: ellipse(50% 50% at 50% 50%);
+   }
+    31% {
+        clip-path: ellipse(50% 5% at 50% 50%);
+   }
+    32% {
+        clip-path: ellipse(50% 50% at 50% 50%);
+   }
+    33% {
+        clip-path: ellipse(50% 50% at 50% 50%);
+   }
+    34% {
+        clip-path: ellipse(50% 5% at 50% 50%);
+   }
+    35% {
+        clip-path: ellipse(50% 50% at 50% 50%);
+   }
+    50% {
+        clip-path: ellipse(50% 50% at 50% 50%);
+   }
+    60% {
+        clip-path: ellipse(50% 20% at 50% 50%);
+   }
+    61% {
+        clip-path: ellipse(50% 20% at 50% 50%);
+   }
+    69% {
+        clip-path: ellipse(50% 20% at 50% 50%);
+   }
+    70% {
+        clip-path: ellipse(50% 50% at 50% 50%);
+   }
+    79% {
+        clip-path: ellipse(50% 50% at 50% 50%);
+   }
+    80% {
+        clip-path: ellipse(50% 5% at 50% 50%);
+   }
+    81% {
+        clip-path: ellipse(50% 50% at 50% 50%);
+   }
+    100% {
+        clip-path: ellipse(50% 50% at 50% 50%);
+   }
+}
+@keyframes hover {
+    0% {
+        transform: translateY(0px);
+   }
+    50% {
+        transform: translateY(-15px);
+   }
+    100% {
+        transform: translateY(0px);
+   }
+}
+@keyframes shadow {
+    0% {
+        width: 170px;
+   }
+    50% {
+        width: 180px;
+   }
+    100% {
+        width: 170px;
+   }
+}
+@keyframes flight-left {
+    0% {
+        width: 150px;
+        transform: skewY(20deg);
+   }
+    50% {
+        width: 125px;
+        transform: skewY(25deg);
+   }
+    100% {
+        width: 150px;
+        transform: skewY(20deg);
+   }
+}
+@keyframes flight-right {
+    0% {
+        width: 150px;
+        transform: skewY(-20deg);
+   }
+    50% {
+        width: 125px;
+        transform: skewY(-25deg);
+   }
+    100% {
+        width: 150px;
+        transform: skewY(-20deg);
+   }
+}
+@keyframes flight-little {
+    0% {
+        height: 110px;
+   }
+    50% {
+        height: 100px;
+   }
+    100% {
+        height: 110px;
+   }
+}

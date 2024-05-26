@@ -1,0 +1,159 @@
+/* the light bulb gradient image wass made with the help of this little library https://julsmorozova.github.io/gradient-image-builder/ */
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    background-color: #222;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#switch {
+    width: 3rem;
+    height: 5rem;
+    background-color: #efefef;
+    margin-top: 4rem;
+    border-radius: 0.35rem;
+    border: 1px solid #444;
+    box-shadow: inset 0 -0.3125rem 0.125rem #5e5c5c;
+    position: relative;
+}
+#switch::before {
+    position: absolute;
+    content: "";
+    top: 14%;
+    left: 44%;
+    height: 12%;
+    width: 2%;
+    border: 0.125rem solid #222;
+}
+#switch::after {
+    position: absolute;
+    content: "";
+    top: 62%;
+    left: 36%;
+    width: 22%;
+    height: 13%;
+    border: 0.125rem solid #222;
+    border-radius: 50%;
+}
+#switch.off {
+    background-color: #ccc;
+    box-shadow: inset 0 0.375rem 0.125rem #fff;
+}
+#switch.off::before {
+    top: 21%;
+}
+#switch.off::after {
+    top: 72%;
+}
+#lightbulb {
+    margin: auto 0;
+    position: relative;
+    width: 24rem;
+    height: 24rem;
+    border-radius: 50%;
+    background: radial-gradient(100% 100% at 50% 50%, #ffdf43 10%, transparent 50%) 51% 20%/ 60% 63% no-repeat;
+}
+#lightbulb::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: none;
+    background: radial-gradient(100% 100% at 126% 100%, transparent 36%, #fff 36.5% 49.5%, transparent 50%) 27% 21%/ 14% 13% no-repeat, radial-gradient(59% 115% at -20% 100%, transparent 77.5%, #ffd504 78% 95%, transparent 95% 100%) 45.35% 56.5%/ 16% 9% no-repeat, radial-gradient(100% 100% at 50% 50%, #fff 49.5%, transparent 50%) 37% 26.35%/ 1.5% 1.85% no-repeat, radial-gradient(100% 100% at 50% 50%, #fff 49.5%, transparent 50%) 34.5% 30.5%/ 1.85% 2% no-repeat, radial-gradient(100% 100% at 50% 50%, #fff 49.5%, transparent 50%) 33.75% 33.75%/ 2% 2.5% no-repeat, radial-gradient(100% 100% at 50% 50%, #ffdf43 49.5%, transparent 50%) 40% 29%/ 20% 22% no-repeat, radial-gradient(150% 81% at 10% 60%, #ffd504 49.5%, transparent 50%) 50% 54%/ 15% 18% no-repeat, radial-gradient(100% 100% at 50% 50%, #ffd504 49.5%, transparent 50%) 47% 30.25%/ 34% 38% no-repeat, radial-gradient(50% 100% at 100% 80%, transparent 89.5%, #e5bd02 90%) 59.5% 61%/ 17% 12% no-repeat, radial-gradient(50% 100% at 0% 80%, transparent 89.5%, #e5bd02 90%) 42% 61%/ 17% 12% no-repeat, radial-gradient(100% 100% at 50% 50%, #e5bd02 49.5%, transparent 50%) 51% 30%/ 40% 40% no-repeat, linear-gradient(rgba(255, 255, 255, 0.2), transparent) 50% 74%/ 11% 10% no-repeat, radial-gradient(100% 100% at 50% 50%, #777 49.5%, transparent 50%) 42% 68%/ 2% 2% no-repeat, radial-gradient(100% 100% at 50% 50%, #777 49.5%, transparent 50%) 59% 68%/ 2% 2% no-repeat, radial-gradient(100% 100% at 50% 50%, #777 49.5%, transparent 50%) 58% 71%/ 2% 2% no-repeat, radial-gradient(100% 100% at 50% 50%, #777 49.5%, transparent 50%) 42.5% 71%/ 2% 2% no-repeat, radial-gradient(100% 100% at 50% 50%, #777 49.5%, transparent 50%) 57% 74%/ 2% 2% no-repeat, radial-gradient(100% 100% at 50% 50%, #777 49.5%, transparent 50%) 43.5% 74%/ 2% 2% no-repeat, radial-gradient(100% 100% at 50% 50%, #777 49.5%, transparent 50%) 55% 77%/ 2% 2% no-repeat, radial-gradient(100% 100% at 50% 50%, #777 49.5%, transparent 50%) 46% 77%/ 2% 2% no-repeat, linear-gradient(#777, #777) 50.5% 77%/ 9% 2% no-repeat, linear-gradient(#777, #777) 50.5% 74%/ 13% 2% no-repeat, linear-gradient(#777, #777) 50.5% 71%/ 15% 2% no-repeat, linear-gradient(#777, #777) 50.5% 68%/ 17% 2% no-repeat;
+}
+#lightbulb::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(100% 100% at 50% -10%, transparent 36%, #222 36.5% 49.5%, transparent 50%) 50% 47%/ 9% 7% no-repeat, radial-gradient(100% 100% at 50% 120%, transparent 36%, #222 36.5% 49.5%, transparent 50%) 58% 33%/ 8% 8% no-repeat, radial-gradient(100% 100% at 50% 120%, transparent 36%, #222 36.5% 49.5%, transparent 50%) 42% 33%/ 8% 8% no-repeat;
+}
+#lightbulb:not(.off) {
+    filter: drop-shadow(2px 0px 45px #fcb531);
+    animation: 3000ms glow ease-in-out 1;
+}
+#lightbulb.off {
+    background: none;
+}
+#lightbulb.off::before {
+    filter: grayscale(1);
+}
+#lightbulb.off::after {
+    background: radial-gradient(100% 100% at 50% 50%, #222 49.5%, transparent 50%) 50% 47%/ 4% 5% no-repeat, radial-gradient(100% 100% at 50% -20%, transparent 36%, #222 36.5% 49.5%, transparent 50%) 58% 41%/ 8% 8% no-repeat, radial-gradient(100% 100% at 50% -20%, transparent 36%, #222 36.5% 49.5%, transparent 50%) 42% 41%/ 8% 8% no-repeat;
+    animation: 2500ms snore infinite;
+}
+#blush {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    animation: 3000ms blush ease-in-out 1;
+    background: radial-gradient(100% 100% at 50% 50%, pink 49.5%, transparent 50%) 62% 40%/ 7% 4% no-repeat, radial-gradient(100% 100% at 50% 50%, pink 49.5%, transparent 50%) 38% 40%/ 7% 4% no-repeat;
+}
+#lightbulb.off #blush {
+    display: none;
+}
+#sleeping {
+    display: none;
+    animation: none;
+}
+#lightbulb.off #sleeping {
+    display: block;
+    content: "Z";
+    opacity: 1;
+    position: absolute;
+    color: #22afde;
+    font-size: 1.5rem;
+    font-weight: 600;
+    top: 13%;
+    left: 60%;
+    animation-name: move, hide;
+    animation-duration: 2500ms, 2500ms;
+    animation-timing-function: ease-in-out, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+}
+@keyframes move {
+    0% {
+        font-size: 1.5rem;
+        transform: translate(0, 0);
+   }
+    50% {
+        font-size: 2rem;
+        transform: translate(100%, -50%);
+   }
+    100% {
+        font-size: 2.5rem;
+        transform: translate(200%, -100%);
+   }
+}
+@keyframes hide {
+    to {
+        opacity: 0;
+   }
+}
+@keyframes glow {
+    from {
+        background: radial-gradient(100% 100% at 50% 50%, #ffdf43 10%, transparent 30%) 51% 20%/ 60% 63% no-repeat;
+        filter: drop-shadow(2px 0px 5px #fcb531);
+   }
+}
+@keyframes snore {
+    0%, 100% {
+        background: radial-gradient(100% 100% at 50% 50%, #222 49.5%, transparent 50%) 50% 47%/ 4% 5% no-repeat, radial-gradient(100% 100% at 50% -20%, transparent 36%, #222 36.5% 49.5%, transparent 50%) 58% 41%/ 8% 8% no-repeat, radial-gradient(100% 100% at 50% -20%, transparent 36%, #222 36.5% 49.5%, transparent 50%) 42% 41%/ 8% 8% no-repeat;
+   }
+    50% {
+        background: radial-gradient(100% 100% at 50% 50%, #222 49.5%, transparent 50%) 50% 47%/ 9% 5% no-repeat, radial-gradient(100% 100% at 50% -20%, transparent 36%, #222 36.5% 49.5%, transparent 50%) 58% 41%/ 8% 8% no-repeat, radial-gradient(100% 100% at 50% -20%, transparent 36%, #222 36.5% 49.5%, transparent 50%) 42% 41%/ 8% 8% no-repeat;
+   }
+}
+@keyframes blush {
+    from {
+        opacity: 0;
+   }
+}
