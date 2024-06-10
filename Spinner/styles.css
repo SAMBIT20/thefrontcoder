@@ -1,0 +1,130 @@
+body {
+    /* background: #060726; */
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+  
+    background-image: radial-gradient(#4359ffa8 0.5px, transparent 1px);
+    background-size: 25px 25px;
+    background-color: #08030e;
+  
+  }
+  
+  .heading{
+    text-align: center;
+    color: #ffffff;
+  }
+  .heading h2{
+  text-transform: uppercase;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  }
+  .heading h1{
+  margin-top: -6px;
+  }
+  .heading h3{
+    margin-top: -12px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #a8acb7;
+    text-transform: uppercase;
+      /* Typing animation */
+      overflow: hidden; /* Ensures text stays within the container */
+      white-space: nowrap; /* Prevents text from wrapping */
+      border-right: 0.15em solid orange; /* Cursor effect */
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+  .heading img{
+    width: 50px;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+  }
+  .frame {
+    margin-top: -120px;
+    /* position: relative; */
+    width: 70%;
+    /* translate: 0 92px; */
+    /* margin: auto; */
+    display: grid;
+    place-items: center;
+    scale: 1.2;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* padding: 30px 0px; */
+    border-radius: 8px;
+    background-color:  #0a0c24be;
+  
+    padding-top: 60px;
+  
+  }
+  
+  .frame :is(h2, h1, h3) {
+    font-weight: 400;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .frame h2 {
+    font-size: 10px;
+    margin: 0 0 0px;
+    color: #000000;
+  }
+  
+  .frame h1 {
+    font-size: 24px;
+    color: #000000;
+    margin: 0 0 40px;
+  }
+  
+  .frame h3 {
+    position: absolute;
+    bottom: -45px;
+    font-size: 12px;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 0 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  
+  .grid.two-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid > div {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  
+  .grid.grid.two-col > div {
+    width: 110px;
+  }
+  
+  .grid > div > p {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    translate: -50% 0;
+    margin: 0;
+  }
+  
