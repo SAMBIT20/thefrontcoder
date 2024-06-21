@@ -1,0 +1,84 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: radial-gradient(#4359ffa8 1px, transparent 1px);
+  background-size: 25px 25px;
+  background-color: #08030e;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading{
+    color: #fff;
+    font-weight: 400 !important;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 8px;
+  background-color: rgb(25, 25, 25);
+  width: 350px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.box {
+  width: 40px;
+  height: 40px;
+  background-color: #715ae4;
+  border-radius: 6px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8px;
+  transition: transform 0.5s ease;
+}
+
+.code {
+  /* margin-top: 10px; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  padding: 5px;
+  font-size: 0.8em;
+  text-align: center;
+  color: white;
+}
+.key{
+    color: #647ef0;
+}
+.prop{
+    color: #9679f5;
+    margin-left: 5px;
+}
+/* Transform examples on hover */
+.translate:hover {
+  transform: translate(-5px, -10px);
+}
+
+.rotate:hover {
+  transform: rotate(45deg);
+}
+
+.scale:hover {
+  transform: scale(0.8);
+}
+
+.skew:hover {
+  transform: skew(20deg, 20deg);
+}
+
+.matrix:hover {
+  transform: matrix(0, 1, 1, 0, 0, 0);
+}
