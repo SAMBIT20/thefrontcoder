@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Card Hover Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card blue">
+        <div class="product">
+            <span class="number">01</span>
+            <span class="sneakers">SNEAKERS</span>
+            <span class="price">$39.9</span>
+            <img src="images/nike-blue.png">
+        </div>
+        <div class="title">
+            <h2>Nike Blue</h2>
+        </div>
+    </div>
+
+    <div class="card purple">
+        <div class="product">
+            <span class="number">02</span>
+            <span class="sneakers">SNEAKERS</span>
+            <span class="price">$49.9</span>
+            <img src="images/nike-purple.png">
+        </div>
+        <div class="title">
+            <h2>Nike Purple</h2>
+        </div>
+    </div>
+
+    <script src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 5000,
+            glare: true,
+            'max-glare': 0.5,
+        });
+    </script>
+    
+</body>
+</html>

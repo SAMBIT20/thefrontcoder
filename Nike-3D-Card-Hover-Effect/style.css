@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,800;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease-in-out;
+}
+
+body {
+    background: #120D24;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.card {
+    width: 220px;
+    height: 340px;
+    border-radius: 12px;
+    transform-style: preserve-3d;
+}
+.card.blue {
+    background: linear-gradient(135deg, #09AFFF, #125575);
+}
+.card.purple {
+    background: linear-gradient(135deg, #5911F2, #290987);
+}
+
+.card .product {
+    height: 85%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+}
+.product .number {
+    font-size: 80px;
+    line-height: 80px;
+    font-style: italic;
+    opacity: 0.25;
+}
+.product .sneakers {
+    font-size: 35px;
+    line-height: 35px;
+    font-style: italic;
+    opacity: 0.7;
+}
+.product img {
+    height: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-35%, -45%, 0);
+    pointer-events: none;
+}
+.product .price {
+    background: rgba(255, 255, 255, 0.15);
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: -20px;
+    padding: 5px 20px;
+    border-radius: 99px 0 0 99px;
+}
+
+.card .title {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 12px 12px;
+    transform-style: preserve-3d;
+}
+.card.blue .title {
+    background: #039BE5;
+}
+.card.purple .title {
+    background: #5B1AE3;
+}
+
+.card:hover .product img {
+    transform: translate3d(-50%, -40%, 80px);
+}
+.card:hover .product .number {
+    transform: translateZ(40px);
+    opacity: 1;
+}
+.card:hover .product .sneakers {
+    transform: translateZ(40px);
+    opacity: 0.85;
+}
+.card:hover .product .price {
+    transform: translateZ(20px);
+}
+.card:hover .title h2 {
+    transform: translateZ(20px);
+}
