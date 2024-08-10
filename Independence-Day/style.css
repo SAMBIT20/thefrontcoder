@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative; /* Ensure body is positioned relative */
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./india-gate.jpeg");
+    background-color: #000000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 0; /* Ensure it is below other content */
+}
+
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity level */
+    z-index: 1; /* Ensure the overlay is above the background image */
+    pointer-events: none; /* Allows clicks to pass through the overlay */
+}
+
+  .container {
+    height: 700px;
+    width: 700px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    clip-path: url(#map-path);
+    z-index: 9;
+  }
+  svg {
+    height: 0;
+    width: 0;
+  }
+  .color-orange,
+  .color-green {
+    position: absolute;
+    width: 100%;
+    height: 39%;
+    left: 0;
+    animation: slide-right 6s;
+  }
+  .color-orange {
+    top: 0;
+    background: linear-gradient(#fec200, #ff8a00);
+  }
+  .color-green {
+    bottom: 0;
+    background: linear-gradient(#4cc701, #0a8d03);
+  }
+  @keyframes slide-right {
+    0% {
+      left: -100%;
+    }
+  }
+  .color-white {
+    position: absolute;
+    width: 100%;
+    height: 22%;
+    top: 39%;
+    background-color: #ffffff;
+    right: 0;
+    animation: slide-left 6s;
+  }
+  @keyframes slide-left {
+    0% {
+      right: -100%;
+    }
+  }
+  #ashoka-chakra {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    margin: auto;
+    left: -150px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    animation: spin 3s 4.2s forwards;
+    transform: scale(0);
+  }
+  @keyframes spin {
+    80% {
+      transform: scale(1.6) rotate(360deg);
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+
+  
