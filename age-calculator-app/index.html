@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Age calculator app challenge designed by Frontend Mentor, coded by Rau (raubaca)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Age calculator app | by Rau (raubaca)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <form id="form" class="form" autocomplete="off" novalidate>
+        <div class="field">
+          <label class="field__label">Day</label>
+          <input
+            type="number"
+            name="day"
+            id="day"
+            placeholder="DD"
+            min="1"
+            max="31"
+            class="field__input"
+            required
+          />
+          <small class="field__error"></small>
+        </div>
+        <div class="field">
+          <label class="field__label">Month</label>
+          <input
+            type="number"
+            name="month"
+            id="month"
+            placeholder="MM"
+            min="1"
+            max="12"
+            class="field__input"
+            required
+          />
+          <small class="field__error"></small>
+        </div>
+        <div class="field">
+          <label class="field__label">Year</label>
+          <input
+            type="number"
+            name="year"
+            id="year"
+            placeholder="YYYY"
+            min="1900"
+            class="field__input"
+            required
+          />
+          <small class="field__error"></small>
+        </div>
+        <button id="submit" type="submit" class="button">Submit</button>
+      </form>
+      <h1 class="output">
+        <em id="years">- -</em>
+        years
+        <br />
+        <em id="months">- -</em>
+        months
+        <br />
+        <em id="days">- -</em>
+        days
+      </h1>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

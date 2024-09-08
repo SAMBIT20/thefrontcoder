@@ -1,0 +1,208 @@
+/* Variables */
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+  --font-size-error: 1rem;
+  --font-size-label: 1.2rem;
+  --font-size-input: 1.6rem;
+  --font-size-result: 4.8rem;
+  --label-text-color: var(--smokey-grey);
+  --input-border-color: var(--light-grey);
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font: inherit;
+}
+
+/* Remove input arrows*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type=number] {
+  -webkit-appearance: textfield;
+          appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+/* Main styles */
+body {
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  background-color: var(--off-white);
+  color: var(--off-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main {
+  margin: 2rem auto;
+  width: min(52.5rem, 95%);
+  padding: 3rem 3.5rem 3.5rem;
+  background: var(--white);
+  border-radius: 1.5rem 1.5rem 12.5rem 1.5rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 2rem;
+  background: linear-gradient(to left, var(--off-white), var(--off-white)) no-repeat left bottom 2.9375rem/100% 0.125rem;
+  margin-bottom: 3rem;
+}
+
+.field {
+  position: relative;
+}
+.field__label {
+  font-size: var(--font-size-label);
+  font-weight: 800;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: var(--label-text-color);
+  line-height: 2;
+}
+.field__input {
+  display: block;
+  width: 100%;
+  height: 4.5rem;
+  padding-inline: 1.6rem;
+  font-size: var(--font-size-input);
+  font-weight: 800;
+  border: 1px solid var(--input-border-color);
+  border-radius: 0.5rem;
+}
+.field__error {
+  position: absolute;
+  margin-top: 0.5rem;
+  font-size: var(--font-size-error);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--light-red);
+}
+.field__error:empty {
+  display: none;
+}
+
+.button {
+  display: block;
+  grid-column: 1/-1;
+  place-self: center;
+  margin-top: 4rem;
+  width: 6rem;
+  aspect-ratio: 1;
+  background: url(../assets/icon-arrow.svg) center/50% no-repeat;
+  background-color: var(--purple);
+  color: transparent;
+  border: 0;
+  border-radius: 50%;
+}
+.button:disabled {
+  background-color: var(--smokey-grey);
+}
+
+/* Results */
+.output {
+  font-size: var(--font-size-result);
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: -0.125rem;
+  line-height: 1.1;
+}
+.output em {
+  color: var(--purple);
+  margin-right: -0.625rem;
+}
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid var(--purple);
+}
+
+/* Error styles when there's an error message */
+.field:has(small:not(:empty)) {
+  --label-text-color: var(--light-red);
+  --input-border-color: var(--light-red);
+}
+
+/* Responsive */
+@media screen and (min-width: 768px) {
+  :root {
+    --font-size-error: 0.625rem;
+    --font-size-label: 0.875rem;
+    --font-size-input: 2rem;
+    --font-size-result: 6.5rem;
+  }
+  html {
+    font-size: 100%;
+  }
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 100%;
+  }
+  .form {
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 0;
+  }
+  .field__label {
+    line-height: 3;
+  }
+  .button {
+    margin-top: 0;
+    place-self: end;
+  }
+}
+/* Hover */
+@media (hover: hover) {
+  .field__input {
+    cursor: pointer;
+  }
+  .field__input:hover {
+    border-color: var(--purple);
+  }
+  .button {
+    transition: background-color 0.2s ease-in;
+  }
+  .button:enabled {
+    cursor: pointer;
+  }
+  .button:enabled:hover {
+    background-color: var(--off-black);
+  }
+}
