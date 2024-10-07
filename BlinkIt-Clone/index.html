@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BlinkIt</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- External StyleSheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- NavigationBar -->
+
+    <nav id="navigation_bar">
+      <div id="logo_holder">
+        <a class="BlinkitLogo__LogoContainer-sc-xocpjl-0 jzxMvs" href="/"
+          ><svg
+            width="134"
+            height="30"
+            viewBox="0 0 114 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.3342 7.186C16.2619 7.186 17.9832 7.66644 19.4978 8.62732C21.0262 9.57447 22.2242 10.9197 23.0917 12.663C23.9316 14.3377 24.3516 16.3075 24.3516 18.5724C24.3516 20.7687 23.9316 22.7316 23.0917 24.4612C22.2517 26.1908 21.0675 27.5429 19.5391 28.5175C17.9969 29.5058 16.2619 30 14.3342 30C12.9297 30 11.6078 29.7117 10.3685 29.1352C9.12927 28.5587 8.06901 27.7488 7.18775 26.7056V29.4852H0V0H7.18775V10.4598C8.06901 9.41661 9.12927 8.61359 10.3685 8.05079C11.6078 7.47426 12.9297 7.186 14.3342 7.186ZM12.1861 24.0494C13.2051 24.0494 14.1139 23.8161 14.9125 23.3493C15.7112 22.8826 16.3377 22.2306 16.7921 21.3933C17.2465 20.5697 17.4737 19.6294 17.4737 18.5724C17.4737 17.5429 17.2465 16.6095 16.7921 15.7721C16.3377 14.9348 15.7112 14.2828 14.9125 13.8161C14.1139 13.3493 13.2051 13.116 12.1861 13.116C11.2223 13.116 10.3617 13.3493 9.60432 13.8161C8.84699 14.269 8.2549 14.9073 7.82804 15.731C7.40118 16.5683 7.18775 17.5154 7.18775 18.5724C7.18775 19.6294 7.40118 20.5765 7.82804 21.4139C8.2549 22.2375 8.84699 22.8826 9.60432 23.3493C10.3617 23.8161 11.2223 24.0494 12.1861 24.0494Z"
+              fill="#F8CB46"
+            ></path>
+            <path
+              d="M25.3356 29.4852V0H32.5233V29.4852H25.3356Z"
+              fill="#F8CB46"
+            ></path>
+            <path
+              d="M34.5607 29.4852V7.68016H41.7071V29.4852H34.5607Z"
+              fill="#F8CB46"
+            ></path>
+            <path
+              d="M57.2319 7.186C58.7603 7.186 60.1372 7.5429 61.3627 8.25669C62.5882 8.95676 63.5521 9.94509 64.2544 11.2217C64.9291 12.512 65.2664 13.9739 65.2664 15.6074V29.4852H58.4092V17.2135C58.4092 16.4173 58.2508 15.7104 57.9341 15.0927C57.6312 14.4612 57.1974 13.9739 56.6329 13.6307C56.0821 13.2876 55.4349 13.116 54.6914 13.116C53.9891 13.116 53.3419 13.2876 52.7498 13.6307C52.1577 13.9602 51.6965 14.4132 51.366 14.9897C51.0218 15.5388 50.8496 16.1839 50.8496 16.9252L50.8083 29.4852H43.6619V7.68016H50.8083V10.1716C51.483 9.23816 52.3849 8.51064 53.5141 7.98902C54.6432 7.45367 55.8824 7.186 57.2319 7.186Z"
+              fill="#F8CB46"
+            ></path>
+            <path
+              d="M81.0597 17.2135L89.1769 29.4852H81.0597L76.3091 21.7639L74.1198 24.2965V29.4852H66.932V0H74.1198V16.2869L81.0184 7.68016H89.1356L81.0597 17.2135Z"
+              fill="#F8CB46"
+            ></path>
+            <path
+              d="M34.5569 0.00232667H41.7267V5.59207H34.5569V0.00232667Z"
+              fill="#F8CB46"
+            ></path>
+            <path
+              d="M90.3176 29.4198V7.61479H97.464V29.4198H90.3176Z"
+              fill="#54B226"
+            ></path>
+            <path
+              d="M112.575 23.2634L114 27.855C113.353 28.4727 112.534 28.9737 111.542 29.3581C110.564 29.7424 109.607 29.9346 108.671 29.9346C107.322 29.9346 106.117 29.6395 105.057 29.0492C103.996 28.4452 103.17 27.6079 102.578 26.5372C101.986 25.494 101.69 24.2929 101.69 22.9339V13.3183H98.819V7.61479H101.69V0.00241089H108.547V7.61479H113.071V13.3183H108.547V21.6161C108.547 22.3162 108.733 22.8859 109.105 23.3251C109.477 23.7644 109.952 23.984 110.53 23.984C110.943 23.984 111.329 23.9223 111.687 23.7987C112.045 23.6752 112.341 23.4967 112.575 23.2634Z"
+              fill="#54B226"
+            ></path>
+            <path
+              d="M90.2609 0.00241089H97.4307V5.59215H90.2609V0.00241089Z"
+              fill="#54B226"
+            ></path></svg
+        ></a>
+      </div>
+      <div id="delivery_location">
+        <span class="bold_text">Delivery in 20 minutes</span>
+        Coimbatore 641402, India
+        <i class="fa-solid fa-caret-down"></i>
+      </div>
+      <div class="search_box_nav">
+        <div id="search_box_holder" class="border rounded">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            class="nav_search_box"
+            id="universal_search_box"
+            name="universal_search_box"
+            type="text"
+            placeholder="Search &ldquo;Chololate&ldquo;"
+          />
+        </div>
+      </div>
+      <div class="logIn_text">
+        <a href="#">Login</a>
+      </div>
+      <div class="myCart">
+        <button id="cart_button" class="rounded">
+          <i class="shopping_icon fa-solid fa-cart-shopping"></i> My Cart
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section id="hero">
+      <div class="hero">
+        <img
+          src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=2700/layout-engine/2022-05/Group-33704.jpg"
+          alt="paan corner banner"
+          width="100%"
+          height="234.8623853211009"
+          loading="eager"
+          style="border-radius: 0px; object-fit: fill; cursor: default"
+        />
+      </div>
+    </section>
+
+    <!-- Highlight section -->
+
+    <section id="scrollable_highlight">
+      <div class="highlight">
+        <div class="highlight_box">
+          <img
+            src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg"
+            alt="masthead_web_pharma"
+            width="335.40000000000003"
+            height="195"
+            loading="lazy"
+            style="border-radius: 16px; object-fit: fill; cursor: default"
+          />
+        </div>
+        <div class="highlight_box">
+          <img
+            src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/print_crystal_WEB_0.jpg"
+            alt="pb_printout_service_web"
+            width="335.40000000000003"
+            height="195"
+            loading="lazy"
+            style="border-radius: 16px; object-fit: fill; cursor: default"
+          />
+        </div>
+        <div class="highlight_box">
+          <img
+            src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/Pet-Care_WEB.jpg"
+            alt="masthead_web_pet_care"
+            width="335.40000000000003"
+            height="195"
+            loading="lazy"
+            style="border-radius: 16px; object-fit: fill; cursor: default"
+          />
+        </div>
+        <div class="highlight_box" style="margin-right: 0%">
+          <img
+            src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-03/babycare-WEB.jpg"
+            alt="masthead_web_baby_care"
+            width="335.40000000000003"
+            height="195"
+            loading="lazy"
+            style="border-radius: 16px; object-fit: fill; cursor: default"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Category -->
+
+    <seciton id="product_category">
+      <div id="all_categories">
+        <!-- First Row -->
+
+        <div class="category_row d-flex flex-wrap">
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png"
+              alt="1 - Paan Corner"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-2_10.png"
+              alt="2 - Dairy, Bread &amp; Eggs"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-3_9.png"
+              alt="3 - Fruits &amp; Vegetables"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-4_9.png"
+              alt="4 - Cold Drinks &amp; Juices "
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-5_4.png"
+              alt="5 - Snacks &amp; Munchies "
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-6_5.png"
+              alt="6 - Breakfast &amp; Instant Food"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-7_3.png"
+              alt="7 - Sweet Tooth"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-8_4.png"
+              alt="8 - Bakery &amp; Biscuits"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-9_3.png"
+              alt="9 - Tea, Coffee &amp; Health Drink "
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-10.png"
+              alt="10 - Atta, Rice &amp; Dal"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png"
+              alt="11 - Masala, Oil &amp; More "
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-12.png"
+              alt="12 - Sauces &amp; Spreads"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-13.png"
+              alt="13 - Chicken, Meat &amp; Fish "
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-14.png"
+              alt="14 - Organic &amp; Healthy Living"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-15.png"
+              alt="15 - Baby Care"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-16.png"
+              alt="16 - Pharma &amp; Wellness"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-17.png"
+              alt="17 - Clening Essentials"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-18.png"
+              alt="18 - Home &amp; Office "
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-19.png"
+              alt="19 - Personal Care"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+          <div class="category_item">
+            <img
+              src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-20.png"
+              alt="20 - Pet Care"
+              width="117"
+              height="188.23529411764704"
+              loading="lazy"
+              style="border-radius: 0px; object-fit: fill; cursor: default"
+            />
+          </div>
+        </div>
+      </div>
+    </seciton>
+
+    <!-- Product Cards -->
+
+    <section id="product_cards">
+
+      <!-- First Row  -->
+      <div class="card_container">
+        <div class="card_header bold_text">
+          Dairy, Bread & Eggs <a class="see_all" href="#">see all</a>
+        </div>
+        <div class="card_holder">
+          <div class="mini_card rounded ms-0">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/23779a.jpg?ts=1690808192" alt="Harvest Gold - White Bread" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+            </div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Harvest Gold - White Bread</div>
+            <div class="mini_card_weight">350 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 28
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img
+                class="rounded"
+                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/86446a.jpg?ts=1687948913"
+                alt="Mother Dairy Classic Curd"
+                width="140"
+                height="140"
+                loading="lazy"
+                style="border-radius: 0px; object-fit: fill; cursor: default"
+              />
+            </div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Mother Dairy Classic Curd</div>
+            <div class="mini_card_weight">400 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 34
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/1c0db977-31ab-4d8e-abf3-d42e4a4b4632.jpg?ts=1706182142" alt="Amul Gold Full Cream Fresh Milk" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+            </div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Amul Gold Full Cream Fresh Milk</div>
+            <div class="mini_card_weight">500 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 33
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/7514beed-37f7-4c8c-b50a-4b39842009b8.jpg?ts=1707312315" alt="Amul Salted Butter" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+            </div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Amul Salted Butter</div>
+            <div class="mini_card_weight">500 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 285
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/2d037337-0ca2-463c-9f98-a6cba298d7a5.jpg?ts=1707312317" alt="Mother Dairy Paneer" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+            </div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Mother Dairy Paneer</div>
+            <div class="mini_card_weight">200 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 95
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/0f895474-ac1e-4f52-9587-891e32ab1ba9.jpg?ts=1707312315" alt="Amul Pure Milk Cheese Slices" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+            </div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Amul Pure Milk Cheese Slices</div>
+            <div class="mini_card_weight">200 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 140
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/487729a.jpg?ts=1700208078" alt="Table White White Eggs (6 pieces)" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+            </div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Table White White Eggs (6 pieces)</div>
+            <div class="mini_card_weight">6 pieces</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 56
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/45533a.jpg?ts=1687948907" alt="Amul Masti Curd" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+            </div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Amul Masti Curd</div>
+            <div class="mini_card_weight">400 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 34
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/329500a.jpg?ts=1687949315" alt="Amul Fresh Malai Paneer" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+            </div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Amul Fresh Malai Paneer</div>
+            <div class="mini_card_weight">200 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 91
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/439697a.jpg?ts=1688471557" alt="Amul Blend Diced Cheese" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+            </div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Amul Blend Diced Cheese</div>
+            <div class="mini_card_weight">200 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 125
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+
+      <div class="card_container">
+        <div class="card_header bold_text">
+          Snacks & Munchies <a class="see_all" href="#">see all</a>
+        </div>
+        <div class="card_holder">
+          <div class="mini_card rounded ms-0">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/19266a.jpg?ts=1688625382" alt="Haldiram's Bhujia" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Haldiram's Bhujia</div>
+            <div class="mini_card_weight">400 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 111
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818" alt="Lay's India's Magic Masala Potato Chips (40 g)" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+            </div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Lay's India's Magic Masala Potato Chips (40 g)</div>
+            <div class="mini_card_weight">40 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 20
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/432818a.jpg?ts=1688444559" alt="Doritos Cheese Nachos" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Doritos Cheese Nachos</div>
+            <div class="mini_card_weight">60 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 30
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/19251a.jpg?ts=1687948393" alt="Haldiram's Lite Mixture Namkeen" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Haldiram's Lite Mixture Namkeen</div>
+            <div class="mini_card_weight">150 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 35
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/381269a.jpg?ts=1668156784" alt="Doritos Sweet Chilli Flavour Nachos - Pack of 2" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Doritos Sweet Chilli Flavour Nachos - Pack of 2</div>
+            <div class="mini_card_weight">2 x 82.5 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 80
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/11150a.jpg?ts=1688463551" alt="Uncle Chipps Spicy Treat Flavour Potato Chips" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Uncle Chipps Spicy Treat Flavour Potato Chips</div>
+            <div class="mini_card_weight">50 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 20
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/54056a.jpg?ts=1687525097" alt="Act II Golden Sizzle Popcorn (Pressure Cooker)" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Act II Golden Sizzle Popcorn (Pressure Cooker)</div>
+            <div class="mini_card_weight">30 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 10
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/a28f4dec-a3fb-4f9e-a4e5-8acfe5722a1f.jpg?ts=1707312781" alt="Lay's American Style Cream &amp; Onion Potato Chips" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Lay's American Style Cream &amp; Onion Potato Chips</div>
+            <div class="mini_card_weight">40 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 20
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/b6cbd918-6a6d-4ab3-81bd-cb6e22149ae7.jpg?ts=1705923105" alt="Bingo Mad Angles Pizza Nachos" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Bingo Mad Angles Pizza Nachos</div>
+            <div class="mini_card_weight">66 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 20
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/483458a.jpg?ts=1686565288" alt="Haldiram's Mexilla Tortilla Chips (Nacho Cheese)" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Haldiram's Mexilla Tortilla Chips (Nacho Cheese)</div>
+            <div class="mini_card_weight">80 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 30
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Row -->
+
+      <div class="card_container">
+        <div class="card_header bold_text">
+          Cold Drinks & Juices <a class="see_all" href="#">see all</a>
+        </div>
+        <div class="card_holder">
+          <div class="mini_card rounded ms-0">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/480526a.jpg?ts=1699606570" alt="Jimmy's Cocktails - Cocktail Mix Celebration Pack" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Jimmy's Cocktails - Cocktail Mix Celebration Pack</div>
+            <div class="mini_card_weight">6 x 250 g</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 599
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/20143a.jpg?ts=1687525090" alt="Real Fruit Power Cranberry Juice" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+            </div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Real Fruit Power Cranberry Juice</div>
+            <div class="mini_card_weight">1 L</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 120
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/2217f2ec-4dc7-47ec-b67c-65fe1b848db4.jpg?ts=1707312716" alt="Red Bull Energy Drink (250 ml)" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Red Bull Energy Drink (250 ml)</div>
+            <div class="mini_card_weight">250 ml</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 125
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/6b98633c-7c6a-4708-a372-e2b49da568ab.jpg?ts=1707312322" alt="Coca-Cola Soft Drink (750 ml)" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Coca-Cola Soft Drink (750 ml)</div>
+            <div class="mini_card_weight">750 ml</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 40
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/29280a12-2e73-458c-912c-97a29b217229.jpg?ts=1707312715" alt="Real Activ Fibre+ Multi Fruit Juice" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Real Activ Fibre+ Multi Fruit Juice</div>
+            <div class="mini_card_weight">1 L</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 84
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/15796a.jpg?ts=1687948390" alt="Hommade Lemoneez Syrup" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Hommade Lemoneez Syrup</div>
+            <div class="mini_card_weight">250 ml</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 76
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/448503a.jpg?ts=1687331132" alt="Storia 100% Tender Coconut Water" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Storia 100% Tender Coconut Water</div>
+            <div class="mini_card_weight">1 L</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 121
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/69250a.jpg?ts=1679035809" alt="Real Activ 100% Orange Juice" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Real Activ 100% Orange Juice</div>
+            <div class="mini_card_weight">1 L</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 135
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/374687a.jpg?ts=1688469730" alt="Sting Energy Drink (250 ml)" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="rounded"
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Sting Energy Drink (250 ml)</div>
+            <div class="mini_card_weight">250 ml</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 20
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+
+          <div class="mini_card rounded">
+            <div class="mini_card_image">
+              <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/10536a.jpg?ts=1694684179" alt="Frooti Mango Drink" width="140" height="140" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"></div>
+            <div class="mini_card_timing">
+              <div class="mini_card_timing_block rounded">
+                <img
+                  class="mini_card_timer_image"
+                  src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png"
+                  style="
+                    width: 13px;
+                    transition-property: opacity;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 0.15s;
+                    opacity: 1;
+                    height: 13px;
+                  "
+                />
+                20 MINS
+              </div>
+            </div>
+            <div class="mini_card_title">Frooti Mango Drink</div>
+            <div class="mini_card_weight">1.8 L</div>
+            <div class="mini_card_footer">
+              <div class="mini_card_price">
+                <i class="fa-solid fa-indian-rupee-sign"></i> 100
+              </div>
+              <div class="btn btn-outline-success mini_card_btn">ADD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+      <div class="footer_top">
+        <div class="footer_top_first">
+          <div class="footer_fop_first_heading">Useful Links</div>
+          <div class="footer_links">
+            <div class="footer_col">
+              <ul>
+                <li>About</li>
+                <li>Careers</li>
+                <li>Blog</li>
+                <li>Press</li>
+                <li>Lead</li>
+                <li>Value</li>
+              </ul>
+            </div>
+            <div class="footer_col">
+              <ul>
+                <li>Privacy</li>
+                <li>Terms</li>
+                <li>FAQs</li>
+                <li>Security</li>
+                <li>Mobile</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+            <div class="footer_col">
+              <ul>
+                <li>Partner</li>
+                <li>Express</li>
+                <li>Seller</li>
+                <li>Spotlight</li>
+                <li>Warehouse</li>
+                <li>Deliver</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer_top_second">
+          <div class="footer_fop_first_heading">Categories <span id="footer_see_all">&nbsp; See all</span></div>
+          <div class="footer_links">
+            <div class="footer_col">
+              <ul>
+                <li>Vegetables and Fruits</li>
+                <li>Cold Drinks & Juices</li>
+                <li>Bakery & Biscuits</li>
+                <li>Dry Fruits, Masala & Oil</li>
+                <li>Paan Corner</li>
+                <li>Pharma & Wellness</li>
+                <li>Personal Care</li>
+                <li>Beauty & Cosmetics</li>
+                <li>Toys & Games</li>
+              </ul>
+            </div>
+            <div class="footer_col">
+              <ul>
+                <li>Dairy & Breakfast</li>
+                <li>Instant & Frozen Food</li>
+                <li>Sweet Tooth</li>
+                <li>Sauces & Spreads</li>
+                <li>Organic & Premium</li>
+                <li>Cleaning Essentials</li>
+                <li>Ice Creams & Frozen Desserts</li>
+                <li>Magazines</li>
+                <li>Print Store</li>
+              </ul>
+            </div>
+            <div class="footer_col ">
+              <ul class="pe-1">
+                <li>Munchies</li>
+                <li>Tea, Coffee & Health Drinks</li>
+                <li>Atta, Rice & Dal</li>
+                <li>Chicken, Meat & Fish</li>
+                <li>Baby Care</li>
+                <li>Home & Office</li>
+                <li>Pet Care</li>
+                <li>Books</li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      </div>
+      <div class="footer_mid_social">
+        <div class="footer_mid_commercial">© Blink Commerce Private Limited (formerly known as Grofers India Private Limited), 2016-2024</div>
+        <div class="footer_mid_downloads">Download App &nbsp;
+          <img src="https://blinkit.com/d61019073b700ca49d22.png" alt="App Store" width="92" height="30" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;"> &nbsp;
+          <img src="https://blinkit.com/8ed033800ea38f24c4f0.png" alt="Play Store" width="92" height="30" loading="lazy" style="border-radius: 0px; object-fit: fill; cursor: default;">
+        </div>
+        <div class="footer_mid_icons">
+          <div class="footer_socail_icon rounded-circle"><i class="fa-brands fa-facebook px-2"></i> </div>&nbsp;
+          <div class="footer_socail_icon rounded-circle"><i class="fa-brands fa-twitter px-2"></i></div>&nbsp;
+          <div class="footer_socail_icon rounded-circle"><i class="fa-brands fa-instagram px-2"></i></div>&nbsp;
+          <div class="footer_socail_icon rounded-circle"><i class="fa-brands fa-linkedin-in px-2"></i></div>&nbsp;
+          <div class="footer_socail_icon rounded-circle"><i class="fa-brands fa-threads px-2"></i></div>
+        </div>
+      </div>
+      <div class="footer_end">
+        “Blinkit” is owned & managed by "Blink Commerce Private Limited" (formerly known as Grofers India Private Limited) and is not related, linked or interconnected in whatsoever manner or nature, to “GROFFR.COM” which is a real estate services business operated by “Redstone Consultancy Services Private Limited”. Made with ❤️ Vishnu Thangaraj
+      </div>
+    </footer> 
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
