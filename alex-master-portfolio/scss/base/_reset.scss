@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+img {
+    border: 0;
+    outline: 0;
+    max-width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $bgColor;
+    font-family: $font;
+}
+
+a {
+    display: inline-block;
+    color: $lightBlack;
+    @include animate(.3s);
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    color: $black;
+    line-height: 24px;
+}
+
+.color {
+    color: $color;
+}

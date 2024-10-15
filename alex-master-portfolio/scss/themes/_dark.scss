@@ -1,0 +1,354 @@
+[data-bs-theme="dark"] {
+    .header {
+        &--nav ul {
+            li {
+                a {
+                    color: #88949B !important;
+                }
+
+                .active:after {
+                    background: $primary-color;
+                }
+
+                a:after {
+                    background: $primary-color;
+                }
+            }
+        }
+
+        .header-social-icon {
+            path {
+                fill: #171C23;
+            }
+
+            button {
+                color: #171C23;
+                border-color: #171C23;
+            }
+        }
+    }
+
+    .header-social-icon a:hover {
+        background-color: #171C23;
+    }
+
+    .header-social-icon a:hover path {
+        fill: $primary-color;
+    }
+
+    .header-social-icon .header-btn:hover {
+        background-color: #171C23;
+        color: $primary-color;
+        border-color: $primary-color;
+    }
+
+    .banner {
+        background-color: #171C23;
+        background-image: url(../images/banner-background-dark.png);
+        padding-top: 40px;
+        min-height: 100vh;
+        margin-top: -75px;
+        background-size: cover !important;
+        background-position: center !important;
+
+        &--content {
+            &--left {
+                h4 {
+                    color: #fff;
+                }
+
+                h2 {
+                    color: #fff;
+
+                    span {
+                        color: $primary-color;
+                    }
+                }
+
+                p {
+                    color: #F0FCF9;
+                }
+            }
+        }
+    }
+
+    .about {
+        .about--right {
+            span {
+                color: #F0FCF9;
+            }
+
+            h5 {
+                color: #fff;
+            }
+
+            .btnn-border-dark {
+                color: #fff !important;
+                border-color: #fff !important;
+            }
+
+            .btnn-border-dark:hover {
+                border-color: #20ac67 !important;
+            }
+        }
+
+        background-color: #21272F;
+        margin-top: -50px;
+
+        .info-item {
+            background-color: #171C23;
+
+            p {
+                color: #F0FCF9;
+            }
+        }
+    }
+
+    .header-curve path {
+        fill: #21272F;
+    }
+
+    .common--header--subtitle {
+        color: #F0FCF9;
+    }
+
+    .partner-all-item {
+        background-color: #171C23 !important;
+    }
+
+    .services {
+        background-color: #21272F;
+
+        &--body {
+            &-item {
+                background: #171C23;
+                box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.18);
+
+                span {
+                    color: #F0FCF9;
+                    letter-spacing: 2px;
+                    font-weight: 300;
+                }
+
+                p {
+                    color: #F0FCF9;
+                }
+
+                h4 {
+                    color: #fff;
+                }
+            }
+
+            &-item:hover {
+                color: #fff;
+                background-color: $primary-color;
+            }
+        }
+    }
+
+    .portfolio {
+        background-color: #171C23;
+
+        .tab-list {
+            background-color: #21272F;
+        }
+
+        &-arrows {
+            path {
+                stroke: #fff;
+            }
+
+            i:hover path {
+                stroke: $primary-color;
+            }
+
+            i:hover {
+                background-color: #21272F;
+            }
+        }
+    }
+
+    .card {
+        background-color: transparent;
+
+        &-body {
+            a {
+                color: #fff;
+            }
+
+            span {
+                color: #88949B;
+            }
+        }
+    }
+
+    .portfolio {
+        padding-bottom: 80px;
+    }
+
+    .testimonial {
+        margin-top: 0;
+        background-color: #21272F;
+
+        &-slider-content {
+            p {
+                color: #F0FCF9
+            }
+
+            & p:after {
+                background-color: $primary-color;
+            }
+
+            h3 {
+                color: #fff;
+            }
+
+            span {
+                color: #88949B;
+            }
+        }
+
+        i {
+            background-color: #171C23;
+
+            path {
+                stroke: #fff;
+            }
+        }
+    }
+
+    .partner,
+    .blog {
+        background-color: #171C23;
+    }
+
+    .footer-curve {
+        background: #171C23;
+    }
+
+    .contact-left h4,
+    .contact-header-color {
+        color: #21272F;
+    }
+
+    .contact-right {
+        background: #171C23;
+    }
+
+    .contact-right-item p {
+        color: #F0FCF9;
+    }
+
+    input::-webkit-input-placeholder {
+        color: #21272F !important;
+    }
+
+    input::-webkit-textarea-placeholder {
+        color: #21272F !important;
+    }
+
+    textarea::-webkit-input-placeholder {
+        color: #21272F !important;
+    }
+
+    textarea:-moz-placeholder {
+        /* Firefox 18- */
+        color: #21272F !important;
+    }
+
+    textarea::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #21272F !important;
+    }
+
+    textarea:-ms-input-placeholder {
+        color: #21272F !important;
+    }
+
+    .contact-left .contact-btn {
+        background-color: #21272F;
+    }
+
+    .secondary-footer {
+        &-social-icon {
+            a {
+                padding: 0 10px;
+            }
+        }
+
+        background-color: $primary-color;
+
+        &-mid {
+            color: #21272F;
+        }
+    }
+
+    select#mode {
+        background: none;
+        color: #21272F;
+    }
+
+    option {
+        background: $primary-color;
+    }
+
+    .secondary-footer-social-icon {
+        path {
+            fill: #21272F;
+        }
+
+        a:hover {
+            background-color: #21272F;
+        }
+    }
+
+    .header .nav-all ul li .active {
+        position: relative;
+        color: #fff;
+    }
+
+    .portfolio-arrows-left,
+    .portfolio-arrows-right {
+        background-color: #171C23;
+    }
+
+    .testimonial-arrows svg {
+        path {
+            stroke: #20ac67;
+        }
+    }
+
+    .mobile-bars-position .line-mbl-responsive::before {
+        background-color: #fff;
+    }
+
+    .mobile-bars-position .line-mbl-responsive::after {
+        background-color: #fff;
+    }
+
+    .mobile-menu-wrapper .mobile-menu {
+        background-color: #21272F;
+
+        ul {
+            li a {
+                color: #fff;
+            }
+        }
+    }
+
+    .mobile-menu-bar {
+        svg {
+            fill: #fff;
+
+            path {
+                stroke: #fff;
+            }
+        }
+    }
+
+    .secondary-footer-right {
+        select {
+            color: #000;
+        }
+    }
+}

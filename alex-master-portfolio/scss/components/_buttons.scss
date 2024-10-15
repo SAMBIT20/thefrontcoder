@@ -1,0 +1,22 @@
+.btnn-primary {
+    background-color: $primary-color;
+    border: 0;
+    color: #fff;
+    font-family: 'Epilogue';
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+.btnn-border-light {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.btnn-border-dark {
+    background-color: transparent;
+    border: 1px solid #21272F !important;
+    border-radius: 5px;
+    color: #21272F !important;
+    font-weight: 700 !important;
+}

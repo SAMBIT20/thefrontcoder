@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Alex Portfolio</title>
+</head>
+
+<body>
+
+	@@include('sections/alex/header.html')
+	@@include('sections/alex/header-curve.html')
+	@@include('sections/alex/about-elements.html')
+	@@include('sections/alex/services.html')
+	@@include('sections/alex/portfolio.html')
+	@@include('sections/alex/testimonial.html')
+	@@include('sections/alex/partner.html')
+	@@include('sections/alex/blog.html')
+	@@include('sections/alex/footer-curve.html')
+	@@include('sections/alex/contact.html')
+	@@include('sections/alex/footer.html')
+
+    
+
+  <script src="js/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+   <!-- Custom  js-->
+  <script src="js/main.js"></script>
+
+  <!-- responsive menu js-->
+  <script>
+    var mobileMenuWrapper = document.getElementById("mobile-menu-wrapper");
+    function hideMenu() {
+      mobileMenuWrapper.style.visibility = "hidden";
+      mobileMenuWrapper.classList.remove('active');
+    }
+    function showMenu() {
+      mobileMenuWrapper.style.visibility = "visible";
+      mobileMenuWrapper.classList.add('active');
+    }
+    function menutogglemoobile() {
+      if (mobileMenuWrapper.style.visibility === "hidden") {
+        showMenu();
+      } else {
+        hideMenu();
+      }
+    }
+    var x = document.getElementById("closeMenu");
+    x.addEventListener('click', function () {
+      hideMenu();
+    })
+    // hide menu when click outside menu container
+    var overlay = document.getElementsByClassName('background-opacity')[0];
+    overlay.addEventListener('click', function () {
+      hideMenu();
+    })
+  </script>
+</body>
+
+</html>

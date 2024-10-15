@@ -1,0 +1,202 @@
+.mobile-bars-position{
+    position: absolute;
+    top:50px;
+    right: 50px;
+    display: none;
+    .line-mbl-responsive{
+        height:30px;
+        width:30px;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+        position: relative;
+        &::after{
+            content:'';
+            position: absolute;
+            top:12px;
+            left: 0;
+            height: 2px;
+            border-radius: 10px;
+            width: 17px;
+            background-color: #333;
+        }
+        &::before{
+            content:'';
+            position: absolute;
+            height: 2px;
+            border-radius: 8px;
+            width: 10px;
+            background-color: #333;
+            top:6px;
+            left: 0;
+        }
+    }  
+}
+
+.menu-btn{
+    border:0;
+    background-color: transparent;
+}
+
+.header-mbl-social-icon{
+    padding-left:30px;
+    a{
+        height: 40px;
+        width: 40px;
+        line-height: 37px;
+        border-radius: 50%;
+        border:1px solid#29D882;
+        text-align: center;
+
+        margin-right: 8px;
+        &:last-child{
+            margin-right:0px;
+        }
+        svg{
+            path{
+                fill: #29D882;
+            }
+        }
+    }
+    a:hover{
+        height: 40px;
+        width: 40px;
+        background-color:#29D882;
+        border:1px solid#29D882;
+            svg{
+                path{
+                    fill: #ffff;
+                }
+            }
+
+        
+    }
+}
+
+.mobile-menu-header{
+    border-bottom: 1px solid #E9EAF0;
+    padding-bottom: 15px;
+    padding-left:30px;  
+}
+.main-menu{
+    position: absolute;
+    top:30px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 180px;
+}
+
+.header {
+    width: 100%;
+    padding: 0 50px;
+    padding-top: 8px;
+
+    .nav-all {
+        ul {
+            padding-left: 0px;
+            display: flex;
+
+            li {
+                list-style: none;
+
+                a {
+                    font-size: 16px;
+                    color: #88949B;
+                    margin: 0 20px;
+                    padding: 0 6px;
+                    font-family: 'Inter';
+                    font-weight: 600;
+                    position: relative;
+                }
+
+                .active {
+                    position: relative;
+                    color: #21272F;
+                }
+
+                .active:after {
+                    position: absolute;
+                    content: '';
+                    bottom: -5px;
+                    left: 0;
+                    height: 2px;
+                    width: 100%;
+                    background: $primary-color;
+                }
+
+                a:after {
+                    position: absolute;
+                    content: '';
+                    bottom: -5px;
+                    left: 0;
+                    height: 2px;
+                    width: 0%;
+                    background: $primary-color;
+                    transition: .5s;
+                }
+            }
+
+            li:hover a:after {
+                opacity: 1;
+                width: 100%;
+            }
+        }
+    }
+
+    .header-social-icon {
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            padding: 15px 20px;
+            line-height: 15px;
+            font-size: 16px;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: 'Epilogue';
+        }
+    }
+}
+
+.header-social-icon a {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 38px;
+    text-align: center;
+    transition: .5s;
+}
+
+.header-social-icon a:hover {
+    background-color: #fff;
+}
+
+.header-social-icon a path {
+    transition: .5s;
+}
+
+.header-social-icon a:hover path {
+    fill: $primary-color;
+}
+
+.header-social-icon .header-btn {
+    transition: .5s;
+}
+
+.header-social-icon .header-btn:hover {
+    background-color: #fff;
+    color: $primary-color;
+    border-color: $primary-color;
+}
+
+.header-curve {
+	min-height:100px;
+	
+	svg {
+		margin-top: -340px;
+		z-index: 999999;
+		width: 100%;
+	}
+}
